@@ -10,7 +10,11 @@
   },
   "author": "Tomi Pasin",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.15",
+    "nodemon": "^2.0.7"
+  },
   "devDependencies": {
     "express": "^4.17.1",
     "mongoose": "^5.11.15",

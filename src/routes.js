@@ -11,9 +11,6 @@ const ContatosController = require('./app/controller/ContatosController');
 //Isso vai chamar uma função assíncrona em ContatosController chamada index que
 //por sua vez fará um find({}) em Contatos retornando todos os registros.
 routes.get("/contatos", ContatosController.index);
-routes.get('/', function(req, res) {
-    res.send('hello world');
-  });
 
 //para o Post é mais ou menos a mesma coisa. Ele chama, em vez de index uma função 
 //chamada store lá em Contatos. Ela também é assíncrona então ao receber o POST

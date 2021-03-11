@@ -3,7 +3,7 @@
 const express = require('express');
 const db = require('./src/database/config');
 const mongoose = require('mongoose');
-const { prependOnceListener } = require('./src/app/model/Contatos');
+// const { prependOnceListener } = require('./src/app/model/Contatos');
 const PORT = process.env.PORT || 3001;
 
 //dentro da classe APP definimos um construtor com as definições necessárias
@@ -15,7 +15,7 @@ class App {
     this.middlewares();
     this.routes();
     this.express.listen(PORT, () =>
-      console.log(`Sua API REST está funcionando na porta ${serverPort} `)
+      console.log(`Sua API REST está funcionando na porta ${PORT} `)
     );
   }
   //database invoca o método connect do mongoose passando a 

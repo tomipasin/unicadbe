@@ -11,6 +11,7 @@ const ContatosController = require('./app/controller/ContatosController');
 //Isso vai chamar uma função assíncrona em ContatosController chamada index que
 //por sua vez fará um find({}) em Contatos retornando todos os registros.
 routes.get("/contatos", ContatosController.index);
+
 routes.get('/', function(req, res) {
     res.send('hello world');
 

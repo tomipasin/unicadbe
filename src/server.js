@@ -3,7 +3,7 @@
 const express = require('express');
 const db = require('./database/config');
 const mongoose = require('mongoose');
-const serverPort = 3001
+const serverPort = 80
 
 //dentro da classe APP definimos um construtor com as definições necessárias
 //para o nosso servidor.

@@ -1,9 +1,9 @@
 //De início importamos o express, mongoose e a nossa configuração de
 //conexão com o DB. 
 const express = require('express');
-const db = require('./database/config');
+const db = require('./src/database/config');
 const mongoose = require('mongoose');
-const { prependOnceListener } = require('./app/model/Contatos');
+const { prependOnceListener } = require('./src/app/model/Contatos');
 const PORT = process.env.PORT || 3001;
 
 //dentro da classe APP definimos um construtor com as definições necessárias
@@ -36,7 +36,7 @@ class App {
   }
   //para as rotas deste App definimos que o arquivo ./routes.js deve ser usado.
   routes() {
-    this.express.use(require("./routes"));
+    this.express.use(require("./src/routes"));
   }
 }
 //e no final exportamos tudo.

@@ -4,8 +4,8 @@
   "description": "Exemplo de API Rest usando MongoDB",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js",
+    "start": "node /server.js",
+    "dev": "node /server.js",
     "test": "echo \"Error: no test no specified\" && exit 1"
   },
   "author": "Tomi Pasin",

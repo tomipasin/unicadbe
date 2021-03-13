@@ -5,12 +5,19 @@ const db = require('./src/database/config');
 const mongoose = require('mongoose');
 // const { prependOnceListener } = require('./src/app/model/Contatos');
 const PORT = process.env.PORT || 3001;
+const cors = require('cors')
+
+var corsOptions = {
+  origin: "http://localhost:3000"
+};
+
 
 //dentro da classe APP definimos um construtor com as definições necessárias
 //para o nosso servidor.
 class App {
   constructor() {
     this.express = express();
+    this.express.use(cors(corsOptions));
     this.database();
     this.middlewares();
     this.routes();

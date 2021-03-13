@@ -18,11 +18,11 @@ const ContatosSchema = new mongoose.Schema(
       required: true
     },
     origem: {
-      type: Object,
+      type: String,
       required: true
     },
     destino: {
-      type: Object,
+      type: String,
       required: true
     }
   },

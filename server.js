@@ -5,11 +5,11 @@ const db = require('./src/database/config');
 const mongoose = require('mongoose');
 // const { prependOnceListener } = require('./src/app/model/Contatos');
 const PORT = process.env.PORT || 3001;
-const cors = require('cors')
+// const cors = require('cors')
 
-var corsOptions = {
-  origin: "https://testeunicadtomipasin.herokuapp.com/"
-};
+// var corsOptions = {
+//   origin: "https://testeunicadtomipasin.herokuapp.com/"
+// };
 
 
 //dentro da classe APP definimos um construtor com as definições necessárias

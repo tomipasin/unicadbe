@@ -11,6 +11,7 @@ const cors = require('cors')
 class App {
   constructor() {
     this.express = express();
+    this.express.use(cors());
     this.express.options('*', cors()) 
     this.database();
     this.middlewares();
@@ -37,12 +38,11 @@ class App {
   }
   //para as rotas deste App definimos que o arquivo ./routes.js deve ser usado.
   routes() {
-    this.express.use((req, res, next) => {
-      res.header("Access-Control-Allow-Origin", "*");
-      res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE');
-      this.express.use(cors());
-      next();
-  });
+  //   this.express.use((req, res, next) => {
+  //     res.header("Access-Control-Allow-Origin", "*");
+  //     res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE');
+  //     next();
+  // });
     this.express.use(require("./src/routes"));
   }
 }

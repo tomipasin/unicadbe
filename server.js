@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 3001;
 class App {
   constructor() {
     this.express = express();
-    this.express.use(cors(corsOptions));
+    // this.express.use(cors(corsOptions));
     this.database();
     this.middlewares();
     this.routes();

@@ -18,7 +18,7 @@ let corsOptions = {
 class App {
   constructor() {
     this.express = express();
-    this.express.use(cors());
+    this.express.use(cors(corsOptions));
 
     this.database();
     this.middlewares();

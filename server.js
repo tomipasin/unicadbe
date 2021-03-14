@@ -11,10 +11,10 @@ const cors = require('cors')
 class App {
   constructor() {
     this.express = express();
-    express.use((req, res, next) => {
+    this.express.use((req, res, next) => {
         res.header("Access-Control-Allow-Origin", "*");
         res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE');
-        express.use(cors());
+        this.express.use(cors());
         next();
     });
     this.database();

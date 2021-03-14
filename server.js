@@ -41,11 +41,6 @@ class App {
   }
   //para as rotas deste App definimos que o arquivo ./routes.js deve ser usado.
   routes() {
-  //   this.express.use((req, res, next) => {
-  //     res.header("Access-Control-Allow-Origin", "*");
-  //     res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE');
-  //     next();
-  // });
     this.express.use(require("./src/routes"));
   }
 }

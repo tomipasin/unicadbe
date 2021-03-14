@@ -4,16 +4,21 @@ const express = require('express');
 const db = require('./src/database/config');
 const mongoose = require('mongoose');
 const PORT = process.env.PORT || 3001;
-
-
-let cors = require('cors')
+const cors = require('cors')
 
 //dentro da classe APP definimos um construtor com as definições necessárias
 //para o nosso servidor.
 class App {
   constructor() {
     this.express = express();
-    this.express.use(cors());
+    this.express.use((req, res, next) => {
+      //Qual site tem permissão de realizar a conexão, no exemplo abaixo está o "*" indicando que qualquer site pode fazer a conexão
+        res.header("Access-Control-Allow-Origin", "*");
+      //Quais são os métodos que a conexão pode realizar na API
+        res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE');
+        this.express.use(cors());
+        next();
+    });
     this.database();
     this.middlewares();
     this.routes();

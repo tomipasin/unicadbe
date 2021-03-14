@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3001;
 const cors = require('cors')
 
 var corsOptions = {
-  origin: "http://localhost:3000"
+  origin: "https://testeunicadtomipasin.herokuapp.com/"
 };
 
 

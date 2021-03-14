@@ -3,11 +3,10 @@
 const express = require('express');
 const db = require('./src/database/config');
 const mongoose = require('mongoose');
-// const { prependOnceListener } = require('./src/app/model/Contatos');
 const PORT = process.env.PORT || 3001;
 
 
-let cors = require('cors')
+//let cors = require('cors')
 // let corsOptions = {
 //   origin: "https://testeunicadtomipasin.herokuapp.com/"
 // };
@@ -19,7 +18,7 @@ let cors = require('cors')
 class App {
   constructor() {
     this.express = express();
-    this.express.use(cors());
+    // this.express.use(cors());
     this.database();
     this.middlewares();
     this.routes();

@@ -13,9 +13,12 @@ class App {
     this.express = express();
     this.express.use(cors());
     this.express.options('*', cors()) 
+    this.express.use(express.json());
+    this.express.use(express.urlencoded({ extended: true }));
     this.database();
     this.middlewares();
     this.routes();
+
     this.express.listen(PORT, () =>
       console.log(`Sua API REST está funcionando na porta ${PORT} `)
     );

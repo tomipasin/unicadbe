@@ -7,9 +7,9 @@ const PORT = process.env.PORT || 3001;
 
 
 let cors = require('cors')
-// let corsOptions = {
-//   origin: "https://testeunicadtomipasin.herokuapp.com/"
-// };
+let corsOptions = {
+  origin: "https://testeunicadtomipasin.herokuapp.com/CriaEntrega/"
+};
 
 
 

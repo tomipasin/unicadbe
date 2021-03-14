@@ -9,19 +9,19 @@ const mongoose = require("mongoose");
 //só resumirei aqui da senguinte forma: aqui definimos o "esqueleto" dos nossos dados.
 const ContatosSchema = new mongoose.Schema(
   {
-    nome: {
+    "nome": {
       type: String,
       required: true
     },
-    entrega: {
+    "entrega": {
       type: String,
       required: true
     },
-    origem: {
+    "origem": {
       type: String,
       required: true
     },
-    destino: {
+    "destino": {
       type: String,
       required: true
     }

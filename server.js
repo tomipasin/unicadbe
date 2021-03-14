@@ -7,19 +7,13 @@ const PORT = process.env.PORT || 3001;
 
 
 let cors = require('cors')
-let corsOptions = {
-  origin: "https://testeunicadtomipasin.herokuapp.com/CriaEntrega/"
-};
-
-
 
 //dentro da classe APP definimos um construtor com as definições necessárias
 //para o nosso servidor.
 class App {
   constructor() {
     this.express = express();
-    this.express.use(cors(corsOptions));
-
+    this.express.use(cors());
     this.database();
     this.middlewares();
     this.routes();

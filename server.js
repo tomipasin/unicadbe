@@ -11,7 +11,7 @@ const cors = require('cors')
 class App {
   constructor() {
     this.express = express();
-    
+    this.express.options('*', cors()) 
     this.database();
     this.middlewares();
     this.routes();
